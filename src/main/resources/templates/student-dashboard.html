@@ -1,0 +1,60 @@
+
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Student Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+          rel="stylesheet">
+</head>
+<body class="bg-light">
+
+<div class="container mt-5">
+    <div class="card shadow-sm">
+        <div class="card-body p-4">
+            <div class="d-flex justify-content-between align-items-center mb-4">
+                <h2>Student Dashboard</h2>
+                <form th:action="@{/logout}" method="post">
+                    <button type="submit" class="btn btn-outline-danger">
+                        Logout
+                    </button>
+                </form>
+            </div>
+
+            <p class="text-secondary">
+                Welcome! You are logged in as a student.
+            </p>
+
+			<div th:if="${errorMessage}" class="alert alert-warning"
+			     th:text="${errorMessage}">
+			</div>
+
+			<div th:if="${student != null}">
+			    <h4 class="mb-3">My Details</h4>
+
+			    <table class="table table-bordered">
+			        <tr>
+			            <th>Student ID</th>
+			            <td th:text="${student.id}"></td>
+			        </tr>
+			        <tr>
+			            <th>Name</th>
+			            <td th:text="${student.name}"></td>
+			        </tr>
+			        <tr>
+			            <th>Email</th>
+			            <td th:text="${student.email}"></td>
+			        </tr>
+			        <tr>
+			            <th>Course</th>
+			            <td th:text="${student.course}"></td>
+			        </tr>
+			    </table>
+			</div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

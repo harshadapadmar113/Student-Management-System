@@ -1,0 +1,292 @@
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f1f5f9;
+    color: #1e293b;
+}
+
+.dashboard-layout {
+    display: flex;
+    min-height: 100vh;
+}
+
+.sidebar {
+    width: 250px;
+    min-width: 250px;
+    background: #172554;
+    color: white;
+    padding: 28px 16px;
+}
+
+.sidebar h2 {
+    font-size: 23px;
+    font-weight: bold;
+    margin: 0 0 40px;
+    padding: 0 10px;
+    color: white;
+}
+
+.sidebar a {
+    display: block;
+    color: #cbd5e1;
+    text-decoration: none;
+    padding: 13px 14px;
+    margin-bottom: 8px;
+    border-radius: 9px;
+    transition: background 0.2s ease;
+}
+
+.sidebar a:hover,
+.sidebar a.active {
+    background: #2563eb;
+    color: white;
+}
+
+.dashboard-content {
+    flex: 1;
+    min-width: 0;
+    padding: 32px;
+}
+
+.stat-number {
+    font-size: 29px;
+    font-weight: bold;
+    color: #172554;
+}
+
+.form-control {
+    padding: 11px 13px;
+    border-color: #dbe2ea;
+    border-radius: 8px;
+}
+
+.form-control:focus {
+    border-color: #60a5fa;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12);
+}
+
+.btn {
+    border-radius: 8px;
+}
+
+.dashboard-card {
+    scroll-margin-top: 20px;
+}
+
+.student-table th {
+    color: #475569;
+    font-size: 13px;
+    text-transform: uppercase;
+}
+
+.student-table td {
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+@media (max-width: 768px) {
+    .dashboard-layout {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        min-width: 0;
+        padding: 18px;
+    }
+
+    .sidebar h2 {
+        margin-bottom: 20px;
+    }
+
+    .dashboard-content {
+        padding: 18px;
+    }
+}
+
+/* Dashboard card improvements */
+.dashboard-card {
+    scroll-margin-top: 20px;
+    border: 1px solid #e2e8f0;
+    border-radius: 14px;
+    box-shadow: 0 4px 14px rgba(15, 23, 42, 0.04);
+    transition: box-shadow 0.25s ease, transform 0.25s ease;
+}
+
+/* Subtle hover effect */
+.dashboard-card:hover {
+    box-shadow: 0 8px 22px rgba(15, 23, 42, 0.08);
+}
+
+/* Cleaner statistics cards */
+.stat-number {
+    font-size: 30px;
+    font-weight: 700;
+    color: #172554;
+    letter-spacing: -0.5px;
+}
+
+/* Statistics card polish */
+.stat-number {
+    font-size: 32px;
+    font-weight: 700;
+    color: #172554;
+    line-height: 1.3;
+    letter-spacing: -0.7px;
+}
+
+/* Smooth card interaction */
+.dashboard-content .card {
+    transition: box-shadow 0.25s ease;
+}
+
+/* Highlight card borders subtly */
+.dashboard-content .card:hover {
+    border-color: #cbd5e1;
+}
+
+/* Improve card headings */
+.dashboard-content .card h5 {
+    color: #334155;
+    font-weight: 600;
+}
+
+/* Professional input fields */
+.form-control {
+    padding: 11px 14px;
+    border: 1px solid #dbe2ea;
+    border-radius: 9px;
+    background-color: #ffffff;
+    color: #1e293b;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Focus effect */
+.form-control:focus {
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.12);
+    outline: none;
+}
+
+/* Placeholder text */
+.form-control::placeholder {
+    color: #94a3b8;
+}
+
+/* Buttons */
+.btn {
+    border-radius: 8px;
+    font-weight: 500;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn:hover {
+    box-shadow: 0 3px 8px rgba(15, 23, 42, 0.10);
+}
+
+/* Consistent spacing between form fields */
+.dashboard-card .form-label {
+    color: #334155;
+    font-weight: 600;
+    margin-bottom: 7px;
+}
+
+/* Student table improvements */
+.student-table {
+    border-collapse: separate;
+    border-spacing: 0;
+    width: 100%;
+}
+
+.student-table thead th {
+    background-color: #f8fafc;
+    color: #475569;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    padding: 14px 12px;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.student-table tbody td {
+    padding: 15px 12px;
+    color: #334155;
+    border-bottom: 1px solid #f1f5f9;
+    vertical-align: middle;
+}
+
+.student-table tbody tr {
+    transition: background-color 0.2s ease;
+}
+
+.student-table tbody tr:hover {
+    background-color: #f8fafc;
+}
+
+.student-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+/* Student action buttons */
+.student-table .btn {
+    font-size: 12px;
+    padding: 6px 11px;
+}
+
+/* Sidebar polish */
+.sidebar {
+    box-shadow: 4px 0 18px rgba(15, 23, 42, 0.06);
+}
+
+.sidebar a {
+    font-weight: 500;
+    transition: background-color 0.2s ease,
+                color 0.2s ease,
+                padding-left 0.2s ease;
+}
+
+.sidebar a:hover {
+    padding-left: 19px;
+}
+
+/* Dashboard headings */
+.dashboard-content h1 {
+    color: #172554;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+}
+
+/* Responsive layout */
+@media (max-width: 768px) {
+    .dashboard-layout {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        min-width: 0;
+        box-shadow: none;
+    }
+
+    .sidebar a {
+        padding: 11px 14px;
+    }
+
+    .sidebar a:hover {
+        padding-left: 19px;
+    }
+
+    .dashboard-content {
+        padding: 18px;
+    }
+
+    .student-table {
+        min-width: 650px;
+    }
+
+    .dashboard-card {
+        margin-bottom: 18px;
+    }
+}
+
